@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카드팩 목록</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero sub-hero">
+      <nav class="topbar">
+        <div class="brand">
+          <span class="brand-mark">OP</span>
+          <div>
+            <p class="eyebrow">CARD PACK PAGE</p>
+            <h1>카드팩 탐색</h1>
+          </div>
+        </div>
+        <div class="top-links">
+          <a href="index.html">메인으로</a>
+          <a href="index.html#database">카드 DB</a>
+          <a href="deckbuilder.html">덱 빌더</a>
+        </div>
+      </nav>
+      <p class="hero-text">팩 기준으로 수록 카드를 모아 보고 카드 상세 페이지로 연결할 수 있습니다.</p>
+    </header>
+
+    <main class="content-stack">
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">PACK OVERVIEW</p>
+          <h3>카드팩 목록</h3>
+          <p>현재 샘플 데이터에 들어 있는 카드팩만 우선 표시합니다.</p>
+        </div>
+        <div id="packList" class="pack-grid"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">PACK DETAIL</p>
+          <h3 id="packTitle">카드팩</h3>
+          <p id="packDescription"></p>
+        </div>
+        <div id="packCards" class="card-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="data/cards.js"></script>
+  <script src="data/decks.js"></script>
+  <script src="js/shared-data.js"></script>
+  <script src="js/packs.js"></script>
+</body>
+</html>

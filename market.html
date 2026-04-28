@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>매물확인 | ONE PIECE CARD GAME HUB</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="market-page-view">
+  <div class="portal-home epic-portal market-page">
+    <header class="portal-global">
+      <div class="portal-global-inner">
+        <div class="portal-brand-block">
+          <a class="portal-brand" href="index.html">
+            <img src="./logoo.png?v=3" alt="ONE PIECE CARD GAME" class="brand-logo">
+          </a>
+        </div>
+
+        <nav class="portal-menu" aria-label="주요 메뉴">
+          <a class="portal-menu-item" href="tutorial.html">
+            <svg class="portal-menu-icon tutorial-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+              <path d="M4 6.5A2.5 2.5 0 0 1 6.5 4H20v15.5A2.5 2.5 0 0 0 17.5 17H4Z"></path>
+              <path d="M6.5 4A2.5 2.5 0 0 0 4 6.5V20"></path>
+              <path d="M8 8h8"></path>
+              <path d="M8 11.5h8"></path>
+            </svg>
+            <strong>튜토리얼</strong>
+          </a>
+          <a class="portal-menu-item" href="deck.html">
+            <svg class="portal-menu-icon decks-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+              <rect x="4" y="7" width="16" height="10" rx="2"></rect>
+              <path d="M7 10h10"></path>
+              <path d="M7 14h6"></path>
+            </svg>
+            <strong>덱가이드</strong>
+          </a>
+          <a class="portal-menu-item" href="card.html">
+            <svg class="portal-menu-icon cards-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+              <rect x="6" y="4" width="12" height="16" rx="2"></rect>
+              <path d="M9 8h6"></path>
+              <path d="M9 12h6"></path>
+              <path d="M9 16h4"></path>
+            </svg>
+            <strong>카드등록</strong>
+          </a>
+          <a class="portal-menu-item nav-item-wide" href="play.html">
+            <svg class="portal-menu-icon play-nav-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+              <path d="M6 10h12a3 3 0 0 1 3 3v2a3 3 0 0 1-3 3h-1l-2-2H9l-2 2H6a3 3 0 0 1-3-3v-2a3 3 0 0 1 3-3Z"></path>
+              <path d="M8 13v2"></path>
+              <path d="M7 14h2"></path>
+              <path d="M16.5 13.5h.01"></path>
+              <path d="M18.5 15.5h.01"></path>
+              <path d="M8 10V8a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+            </svg>
+            <strong>플레이</strong>
+          </a>
+          <a class="portal-menu-item active" href="market.html">
+            <svg class="portal-menu-icon db-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+              <circle cx="11" cy="11" r="6"></circle>
+              <path d="m20 20-4.2-4.2"></path>
+            </svg>
+            <strong>매물확인</strong>
+          </a>
+        </nav>
+
+        <div class="portal-utility">
+          <a class="portal-store-button" href="play.html">
+            <span>GAME START</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="market-page-main">
+      <div class="market-layout">
+        <aside class="market-sidebar">
+          <p class="market-sidebar-label">MARKET WATCH</p>
+          <h2>매물확인</h2>
+          <div class="market-sidebar-list" role="tablist" aria-label="매물확인 메뉴">
+            <button class="market-sidebar-item active" data-target="price" role="tab" aria-selected="true">시세 조회</button>
+            <button class="market-sidebar-item" data-target="search" role="tab" aria-selected="false">카드 검색</button>
+            <button class="market-sidebar-item" data-target="favorite" role="tab" aria-selected="false">관심 카드</button>
+            <button class="market-sidebar-item" data-target="history" role="tab" aria-selected="false">거래 내역</button>
+            <button class="market-sidebar-item" data-target="sell" role="tab" aria-selected="false">판매 등록</button>
+          </div>
+        </aside>
+
+        <section class="market-content-area">
+          <div class="market-page-header">
+            <p class="market-page-label">PRICE TRACKER</p>
+            <h1>매물확인</h1>
+            <p>카드의 시세와 매물 정보를 확인하고 거래 흐름을 살펴보세요.</p>
+          </div>
+
+          <article class="market-section-panel active" data-panel="price">
+            <div class="market-content">
+              <div class="market-content-head">
+                <div>
+                  <h2>시세 조회</h2>
+                  <p>카드명 또는 카드번호로 현재 매물 정보를 확인하세요.</p>
+                </div>
+              </div>
+
+              <div class="market-search">
+                <input type="text" placeholder="카드 이름 또는 카드번호 입력">
+                <button type="button">검색</button>
+              </div>
+
+              <table class="market-table">
+                <thead>
+                  <tr>
+                    <th>카드</th>
+                    <th>카드명</th>
+                    <th>등급</th>
+                    <th>평균 시세</th>
+                    <th>변동률</th>
+                    <th>매물 수</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><div class="card-thumb thumb-luffy"></div></td>
+                    <td>몽키 D. 루피 (ST01-001)</td>
+                    <td>LEADER</td>
+                    <td>120,000원</td>
+                    <td class="change-up">+5.2%</td>
+                    <td>23</td>
+                  </tr>
+                  <tr>
+                    <td><div class="card-thumb thumb-ace"></div></td>
+                    <td>포트거스 D. 에이스 (ST01-002)</td>
+                    <td>SR</td>
+                    <td>88,000원</td>
+                    <td class="change-up">+2.1%</td>
+                    <td>15</td>
+                  </tr>
+                  <tr>
+                    <td><div class="card-thumb thumb-law"></div></td>
+                    <td>트라팔가 로 (ST10-001)</td>
+                    <td>SR</td>
+                    <td>45,000원</td>
+                    <td class="change-up">+1.4%</td>
+                    <td>31</td>
+                  </tr>
+                  <tr>
+                    <td><div class="card-thumb thumb-hancock"></div></td>
+                    <td>보아 핸콕 (ST03-004)</td>
+                    <td>R</td>
+                    <td>36,000원</td>
+                    <td class="change-down">-0.0%</td>
+                    <td>28</td>
+                  </tr>
+                  <tr>
+                    <td><div class="card-thumb thumb-shanks"></div></td>
+                    <td>샹크스 (ST01-005)</td>
+                    <td>SR</td>
+                    <td>210,000원</td>
+                    <td class="change-up">+3.7%</td>
+                    <td>19</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="market-section-panel" data-panel="search">
+            <div class="market-content">
+              <div class="market-content-head">
+                <div>
+                  <h2>카드 검색</h2>
+                  <p>거래 전 카드 번호와 등급을 정확히 맞춰 검색하는 것이 중요합니다.</p>
+                </div>
+              </div>
+              <div class="market-copy">
+                <ul>
+                  <li>이름이 비슷한 카드가 많으므로 카드번호 검색을 우선 추천합니다.</li>
+                  <li>같은 카드라도 레어도와 일러스트 버전에 따라 시세 차이가 큽니다.</li>
+                  <li>등록 전 최근 거래량과 변동률을 같이 보는 것이 좋습니다.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="market-section-panel" data-panel="favorite">
+            <div class="market-content">
+              <div class="market-content-head">
+                <div>
+                  <h2>관심 카드</h2>
+                  <p>자주 보는 카드의 시세 변화를 모아서 추적하는 섹션입니다.</p>
+                </div>
+              </div>
+              <div class="market-copy">
+                <ul>
+                  <li>덱 강화에 필요한 핵심 카드 위주로 관심 목록을 만드는 것이 효율적입니다.</li>
+                  <li>가격 급등 전 움직임을 포착하기 좋습니다.</li>
+                  <li>공식 연동 전에는 UI 흐름만 먼저 제공합니다.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="market-section-panel" data-panel="history">
+            <div class="market-content">
+              <div class="market-content-head">
+                <div>
+                  <h2>거래 내역</h2>
+                  <p>거래 성사 기록과 가격 흐름을 기준으로 현재 시세 감각을 잡을 수 있습니다.</p>
+                </div>
+              </div>
+              <div class="market-copy">
+                <ul>
+                  <li>최근 성사 가격이 많을수록 현재 시세의 신뢰도가 높습니다.</li>
+                  <li>희귀 카드일수록 실거래 표본 수가 적어 체감 시세 차이가 큽니다.</li>
+                  <li>평균가와 최저가를 함께 보는 습관이 중요합니다.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="market-section-panel" data-panel="sell">
+            <div class="market-content">
+              <div class="market-content-head">
+                <div>
+                  <h2>판매 등록</h2>
+                  <p>보유 카드 상태와 희귀도, 버전 정보를 정확히 적는 것이 판매 효율을 높입니다.</p>
+                </div>
+              </div>
+              <div class="market-copy">
+                <ul>
+                  <li>카드 번호, 상태, 언어, 인쇄 버전을 먼저 정리하세요.</li>
+                  <li>실거래 평균가를 기준으로 시작 가격을 정하면 문의가 빠릅니다.</li>
+                  <li>세트 판매와 단일 판매를 나눠 등록하면 선택지가 넓어집니다.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const marketTabs = document.querySelectorAll(".market-sidebar-item");
+    const marketPanels = document.querySelectorAll(".market-section-panel");
+
+    marketTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const target = tab.dataset.target;
+
+        marketTabs.forEach((item) => {
+          item.classList.remove("active");
+          item.setAttribute("aria-selected", "false");
+        });
+
+        marketPanels.forEach((panel) => {
+          panel.classList.remove("active");
+        });
+
+        tab.classList.add("active");
+        tab.setAttribute("aria-selected", "true");
+        document.querySelector(`[data-panel="${target}"]`)?.classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>

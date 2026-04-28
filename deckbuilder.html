@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>덱 빌더</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero sub-hero">
+      <nav class="topbar">
+        <div class="brand">
+          <span class="brand-mark">OP</span>
+          <div>
+            <p class="eyebrow">DECK BUILDER</p>
+            <h1>덱 빌더 초안</h1>
+          </div>
+        </div>
+        <div class="top-links">
+          <a href="index.html">메인으로</a>
+          <a href="index.html#decks">덱 정보</a>
+          <a href="packs.html">카드팩</a>
+        </div>
+      </nav>
+      <p class="hero-text">
+        리더 선택, 카드 추가/제거, 현재 장수 확인, 색상과 타입 분포, 규칙 검증까지
+        한 번에 확인할 수 있는 프론트엔드 초안입니다.
+      </p>
+    </header>
+
+    <main class="content-stack">
+      <section class="section">
+        <div class="builder-layout">
+          <article class="info-card">
+            <div class="builder-topbar">
+              <div class="builder-topbar-group">
+                <label class="builder-label" for="leaderSelect">리더 선택</label>
+                <select id="leaderSelect" class="builder-name-input"></select>
+              </div>
+              <div class="builder-topbar-group">
+                <label class="builder-label" for="viewMode">라이브러리 보기</label>
+                <select id="viewMode" class="builder-name-input">
+                  <option value="grid">카드형</option>
+                  <option value="list">리스트형</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="database-toolbar">
+              <input id="builderSearch" type="search" placeholder="카드 이름, 번호, 효과 검색">
+              <select id="builderColor">
+                <option value="all">모든 색상</option>
+              </select>
+              <select id="builderType">
+                <option value="all">모든 타입</option>
+              </select>
+            </div>
+
+            <div id="builderLibrary" class="card-grid"></div>
+          </article>
+
+          <aside class="info-card builder-side">
+            <p class="card-label">CURRENT DECK</p>
+            <input id="deckName" class="builder-name-input" type="text" value="새 덱">
+
+            <div class="score-line">
+              <div class="score-box">
+                <span>현재 장수</span>
+                <strong><span id="deckTotal">0</span> / 50</strong>
+              </div>
+              <div class="score-box">
+                <span>선택 리더</span>
+                <strong id="selectedLeaderName">없음</strong>
+              </div>
+            </div>
+
+            <div>
+              <p class="card-label">색상 분포</p>
+              <div id="deckColors" class="core-list"></div>
+            </div>
+
+            <div>
+              <p class="card-label">타입 분포</p>
+              <div id="deckTypes" class="core-list"></div>
+            </div>
+
+            <div>
+              <p class="card-label">규칙 검증</p>
+              <div id="deckValidation" class="validation-list"></div>
+            </div>
+
+            <div class="detail-actions">
+              <button id="resetDeck" class="control-button ghost builder-reset">덱 초기화</button>
+            </div>
+
+            <div id="builderDeckList" class="builder-deck-list"></div>
+
+            <div>
+              <p class="card-label">EXPORT JSON</p>
+              <pre id="deckExport" class="json-preview"></pre>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="data/cards.js"></script>
+  <script src="data/decks.js"></script>
+  <script src="js/shared-data.js"></script>
+  <script src="js/deck-builder.js"></script>
+</body>
+</html>
