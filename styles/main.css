@@ -4548,6 +4548,25 @@ body {
   line-height: 1.7;
 }
 
+.tutorial-app-embed {
+  width: 100%;
+  margin-top: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  background: #090909;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.36);
+}
+
+.tutorial-app-embed iframe {
+  display: block;
+  width: 100%;
+  height: clamp(940px, calc(100vh - 40px), 1120px);
+  min-height: 0;
+  border: 0;
+  background: #090909;
+}
+
 .tutorial-section-panel {
   display: none;
 }
@@ -4629,6 +4648,52 @@ body {
 
 .tutorial-copy-block li + li {
   margin-top: 8px;
+}
+
+@media (max-width: 960px) {
+  .tutorial-page-main {
+    padding: 36px 20px 60px;
+  }
+
+  .tutorial-layout {
+    flex-direction: column;
+  }
+
+  .tutorial-sidebar {
+    width: 100%;
+    flex-basis: auto;
+  }
+
+  .tutorial-sidebar-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tutorial-app-embed iframe {
+    height: 960px;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .tutorial-sidebar-list,
+  .tutorial-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tutorial-info-grid {
+    display: grid;
+    gap: 16px;
+  }
+
+  .tutorial-card-box {
+    padding: 22px;
+  }
+
+  .tutorial-app-embed iframe {
+    height: 920px;
+    min-height: 0;
+  }
 }
 
 .deck-page {
