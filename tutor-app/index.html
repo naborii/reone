@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Battle Tutorial Prototype</title>
+    <script type="module" crossorigin src="./assets/index-DVTW36xG.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-C3U7OQ4f.css">
+  </head>
+  <body>
+    <script>
+      if (location.protocol === "file:" && !location.pathname.replace(/\\/g, "/").includes("/dist/")) {
+        document.addEventListener("DOMContentLoaded", function () {
+          var root = document.getElementById("root");
+          if (root) {
+            root.innerHTML =
+              '<main style="min-height:100vh;display:grid;place-items:center;background:#090909;color:#f6ead1;font-family:Segoe UI,Arial,sans-serif;padding:24px;text-align:center">' +
+              '<section style="max-width:560px;border:1px solid #3a3328;border-radius:8px;background:#151412;padding:28px">' +
+              '<h1 style="margin:0 0 12px;font-size:28px">앱 실행 방법</h1>' +
+              '<p style="line-height:1.7;color:#d7d0c2">이 파일은 개발 서버용입니다. 흰 화면이 보이면 터미널에서 <strong>npm run dev</strong>를 실행한 뒤 표시되는 주소로 열거나, <strong>dist/index.html</strong>을 열어 주세요.</p>' +
+              '</section></main>';
+          }
+        });
+      }
+    </script>
+    <div id="root">
+      <main style="min-height:100vh;display:grid;place-items:center;background:#090909;color:#f6ead1;font-family:Segoe UI,Arial,sans-serif">
+        <p>앱을 불러오는 중입니다...</p>
+      </main>
+    </div>
+  </body>
+</html>
